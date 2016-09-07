@@ -327,7 +327,7 @@ add.col.legend <- function(){
 #' rep <- fit.spict(pol$albacore)
 #' plotspict.biomass(rep)
 #' @export
-plotspict.biomass <- function(rep, logax=FALSE, main='Absolute biomass HEP HEY', ylim=NULL,
+plotspict.biomass <- function(rep, logax=FALSE, main='Absolute biomass HEP HEP HEY', ylim=NULL,
                               plot.obs=TRUE, qlegend=TRUE, xlab='Time', ylab=NULL,
                               rel.axes=TRUE, rel.ci=TRUE, stamp=get.version()){
     if (!'sderr' %in% names(rep)){
