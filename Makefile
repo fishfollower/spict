@@ -22,6 +22,12 @@ install:
 	R CMD INSTALL --preclean --no-multiarch $(TARBALL)
 	date
 
+quick-install: $(PACKAGE)/src/spict.so
+	R CMD INSTALL $(PACKAGE)
+
+$(PACKAGE)/src/spict.so: $(PACKAGE)/src/spict.cpp
+	cd $(PACKAGE)/src; echo "library(TMB); compile('spict.cpp')" | R --slave
+
 unexport TEXINPUTS
 pdf:
 	rm -f $(PACKAGE).pdf
